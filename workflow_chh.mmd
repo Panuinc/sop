@@ -1,95 +1,212 @@
 ---
-title: CHH SOP Workflow — ภาพรวม 6 Phase
+title: CHH SOP Workflow — Operations 90 ขั้น (จาก Master Workflow Detailed)
 config:
   theme: base
   themeVariables:
-    fontFamily: "Sarabun, Tahoma, sans-serif"
+    fontFamily: '"Sarabun", "Tahoma", sans-serif'
     primaryColor: "#E3F2FD"
     primaryTextColor: "#1a2332"
     primaryBorderColor: "#1976D2"
     lineColor: "#37474F"
 ---
 flowchart TD
-    Start("🟢 เริ่ม · ลูกค้าสอบถาม"):::startEnd
-    M[M. ข้อมูลตั้งต้น<br/>เปิดข้อมูลลูกค้า / ผู้ขาย / วัสดุ]:::phase
-
-    subgraph P1 ["Phase 1 — รับออเดอร์ + ทำราคา"]
-        A1[A1. รับเรื่องจากลูกค้า]
-        A2{{"⚑ A2 · ตรวจความครบของข้อมูล<br/>(DOR · ครบหรือยัง?)"}}:::ctrl
-        A3to6[A3-A6. สำรวจหน้างาน + ทำ BOM เบื้องต้น<br/>+ ขอราคาวัสดุ + ทำใบเสนอราคา]
-        A7{{"⚑ A7 · ทบทวนกำไร (Margin)<br/>อนุมัติราคา"}}:::ctrl
-        A8[A8. ส่งใบเสนอราคา + ติดตามผล]
-        WonGate{ลูกค้าตอบรับ?}
+    Start("🟢 เริ่มต้น"):::startEnd
+    subgraph P1 ["Phase 1 — ตั้งค่าข้อมูลหลัก + รับออเดอร์/ทำราคา (M, A)"]
+    M1["M1 · เปิดข้อมูลลูกค้า (Customer Master)"]
+    M2["M2 · ตรวจ Credit + ตั้งวงเงิน (KYC)"]
+    M3["M3 · เปิดข้อมูล Supplier (Approved Vendor List)"]
+    M4["M4 · เปิดรหัสวัสดุ / Item Master + Std Cost"]
+    M5["M5 · ตั้ง Price List + Margin Policy"]
+    A1["A1 · รับ Brief จากลูกค้า (Inquiry)"]
+    A2{{"⚑ A2 · ตรวจสอบความครบของข้อมูล (Definition of Ready)"}}:::ctrl
+    A3["A3 · Site Survey (กรณีติดตั้งหน้างาน / Custom)"]
+    A4["A4 · ทำ BOM เบื้องต้น (Pre-BOM)"]
+    A5["A5 · ขอราคาวัสดุพิเศษจากจัดซื้อ"]
+    A6["A6 · ทำใบเสนอราคา + ประเมินต้นทุน"]
+    A7{{"⚑ A7 · Margin Review + อนุมัติราคา"}}:::ctrl
+    A8["A8 · ส่งใบเสนอราคา + ติดตามผล"]
+    A9["A9 · ต่อราคา / Negotiation"]
+    A10["A10 · ปิดสถานะ Quote (Won / Lost / Hold)"]
     end
-
-    subgraph P2 ["Phase 2 — เขียนแบบ + รับ SO"]
-        B1to2[B1-B2. รับงาน + เขียนแบบ Shop Drawing]
-        B3{{"⚑ B3 · ทบทวนแบบภายใน<br/>(ทำได้จริงหรือไม่?)"}}:::ctrl
-        B4to6[B4-B6. ส่งให้ลูกค้า + แก้แบบ]
-        B7[/"📋 B7 · แบบอนุมัติฉบับสุดท้าย<br/>(AFC · Approved for Construction)"/]:::artifact
-        B8to10[B8-B10. รับ PO + ตรวจสาม-ทาง + เปิด SO]
-        B11[B11. ออกใบเรียกเก็บมัดจำ]
-        B12{{"⛔ B12 · ด่านยืนยันมัดจำเข้า<br/>ก่อนปล่อยเข้าผลิต"}}:::gate
+    subgraph P2 ["Phase 2 — เขียนแบบและรับ Sales Order (B)"]
+    B1["B1 · รับข้อมูลทำแบบ (Trigger เมื่อ Won)"]
+    B2["B2 · เขียน Shop Drawing"]
+    B3{{"⚑ B3 · Internal Cross-check (DFM Review)"}}:::ctrl
+    B4["B4 · สื่อสารทางเทคนิคกับลูกค้า"]
+    B5["B5 · ส่งแบบให้ลูกค้าอนุมัติ"]
+    B6["B6 · Revision Drawing (Free 3 รอบ)"]
+    B7[/"📋 B7 · รับแบบอนุมัติฉบับสุดท้าย (Approved for Construction)"/]:::artifact
+    B8["B8 · รับ PO จากลูกค้า"]
+    B9{{"⚑ B9 · ตรวจ PO (3-Way Match: QT vs PO vs Drawing)"}}:::ctrl
+    B10["B10 · เปิด Sales Order ใน ERP"]
+    B11["B11 · ออกใบเรียกเก็บมัดจำ + ส่งลูกค้า"]
+    B12{{"⛔ B12 · Gate ยืนยันมัดจำเข้าก่อน Release Production"}}:::gate
+    B13["B13 · เคสพิเศษ — ส่งของก่อน PO / มัดจำไม่ครบ"]
+    B14["B14 · Engineering Change Order (ECO) — หลัง AFC"]
     end
-
-    subgraph P3 ["Phase 3 — วางแผน + จัดซื้อ + ตรวจรับวัสดุ"]
-        C1to3[C1-C3. รับ SO + ทำ BOM + ตรวจสต็อก]
-        C4{{"⚑ C4 · ยืนยันวันส่ง<br/>กับลูกค้า"}}:::ctrl
-        C5to9[C5-C9. วางแผนผลิต MPS<br/>+ เปิด PR/PO + ติดตามวัสดุ]
-        C10{{"⚑ C10 · ออกใบสั่งผลิต<br/>+ จัดชุดเอกสารงาน"}}:::ctrl
-        I1[I1. รับวัสดุจากผู้ขาย]
-        I2{{"⚑ I2 · ตรวจรับวัสดุ IQC<br/>ผ่านหรือไม่?"}}:::ctrl
-        I3[I3. จัดเก็บเข้าคลัง]
-        I4[I4. เคลมผู้ขาย]
+    subgraph P3 ["Phase 3 — วางแผนผลิต + จัดซื้อ + ตรวจรับวัตถุดิบ (C, I)"]
+    C1["C1 · รับ SO + Approved Drawing (Trigger Planning)"]
+    C2["C2 · ทำ BOM + Routing ฉบับสมบูรณ์"]
+    C3["C3 · ตรวจสต็อกวัสดุ"]
+    C4{{"⚑ C4 · Capacity Check + Bottleneck Analysis"}}:::ctrl
+    C5["C5 · ทำ Master Production Schedule (MPS)"]
+    C6["C6 · Confirm ETA ลูกค้า"]
+    C7["C7 · เปิด Purchase Requisition (PR)"]
+    C8["C8 · อนุมัติ PR + เปิด PO ให้ Supplier"]
+    C9["C9 · Confirm Supplier + Tracking"]
+    C10{{"⚑ C10 · Issue Production Order + จัด Job Pack"}}:::ctrl
+    I1["I1 · รับวัตถุดิบจาก Supplier (Goods Receipt)"]
+    I2{{"⚑ I2 · ตรวจรับ IQC"}}:::ctrl
+    I3["I3 · Put-away เข้าคลัง"]
+    I4["I4 · เคลม Supplier (กรณี IQC Fail)"]
     end
-
-    subgraph P4 ["Phase 4 — ผลิต"]
-        D1to2[D1-D2. รับชุดเอกสารงาน + เบิกวัสดุ]
-        D3{{"⚑ D3 · ตั้งเครื่อง<br/>+ ตรวจชิ้นแรก"}}:::ctrl
-        D4to10[D4-D10. ตัด/พับ/เจาะ/เชื่อม<br/>/ขัด/พ่นสี/ประกอบ<br/>+ ตรวจคุณภาพระหว่างผลิต]
-        D11{{"⚑ D11 · บันทึกของเสีย<br/>(NCR)"}}:::ctrl
-        D12to14[D12-D14. บันทึกผลต่าง + แก้แบบกลางทาง<br/>+ ควบคุมงานจ้างเหมา]
-        D15[D15. ส่งงานไปตรวจขั้นสุดท้าย]
+    subgraph P4 ["Phase 4 — ผลิต (D)"]
+    D1["D1 · รับ Job Pack เข้าไลน์"]
+    D2["D2 · เบิกวัตถุดิบ (Material Issue)"]
+    D3{{"⚑ D3 · Setup เครื่อง + Calibration + First-piece check"}}:::ctrl
+    D4["D4 · ตัด (Cutting)"]
+    D5["D5 · พับ / ดัด (Bending)"]
+    D6["D6 · เจาะ / CNC / Punching"]
+    D7["D7 · เชื่อม / ประกอบโครงสร้าง (Welding/Joining)"]
+    D8["D8 · ขัด / Sanding / Surface Preparation"]
+    D9["D9 · พ่นสี / Powder Coat / Finishing"]
+    D10["D10 · Sub-assembly + Final Assembly"]
+    D11{{"⚑ D11 · In-process QC (ทุก station ก่อนส่งต่อ)"}}:::ctrl
+    D12["D12 · บันทึก Actual / Yield / Variance"]
+    D13["D13 · บันทึกของเสีย / Rework / NCR"]
+    D14["D14 · Change Order ระหว่างผลิต (Mid-Production Change)"]
+    D15["D15 · ควบคุม Outsource / Subcontract"]
+    D16["D16 · ส่งจาก Production ไป QC Final"]
     end
-
-    subgraph P5 ["Phase 5 — ตรวจคุณภาพ + แพ็ค + ส่งมอบ"]
-        E1{{"⚑ E1 · ตรวจคุณภาพขั้นสุดท้าย 100%<br/>เทียบกับแบบ AFC"}}:::ctrl
-        E2to5[E2-E5. แก้ของเสีย + แพ็ค<br/>+ ย้ายเข้าคลังสินค้าสำเร็จรูป]
-        F1to2[F1-F2. แจ้งพร้อมส่ง<br/>+ ออกใบเรียกเก็บงวดก่อนส่ง]
-        F3{{"⛔ F3 · ด่านยืนยันเงินครบ<br/>ก่อนปล่อยของ"}}:::gate
-        F4to9[F4-F9. วางเส้นทางขนส่ง<br/>+ ออกใบส่งของและใบกำกับภาษี<br/>+ ส่งสินค้า + ลูกค้าเซ็นรับ]
-        F10{{"⚑ F10 · เดินตรวจหน้างาน + ส่งมอบ<br/>ลูกค้าเซ็น PAC/FAC"}}:::ctrl
+    subgraph P5 ["Phase 5 — Final QC + แพ็ก + ส่งมอบ + ติดตั้ง (E, F)"]
+    E1{{"⚑ E1 · Final QC 100%"}}:::ctrl
+    E2["E2 · Reject / Rework Loop"]
+    E3["E3 · NCR + CAPA"]
+    E4["E4 · Packing + Label / Lot / Serial"]
+    E5["E5 · ย้ายเข้าลานสินค้าสำเร็จ (FG Warehouse)"]
+    F1["F1 · Ready-to-Ship (RTS) Notification"]
+    F2["F2 · ออกใบเรียกเก็บงวดก่อนส่ง (ถ้ามี)"]
+    F3{{"⛔ F3 · Gate ตรวจเงินครบก่อนปล่อยของ"}}:::gate
+    F4["F4 · จัด Route / Vehicle / คนขับ"]
+    F5["F5 · ทำเอกสารส่งของ (DO + Tax Invoice)"]
+    F6["F6 · Pre-trip Vehicle / Load Check"]
+    F7["F7 · ขนส่ง + Tracking"]
+    F8["F8 · ส่งของ + ลูกค้าเซ็นรับ"]
+    F9["F9 · ติดตั้ง / Onsite Service (ถ้ามี)"]
+    F10{{"⚑ F10 · Final Acceptance / Handover"}}:::ctrl
+    F11["F11 · เลื่อนส่ง / ลูกค้าปฏิเสธรับ"]
+    F12["F12 · เอกสารคืนกลับ / กรณีบิลผิด"]
     end
-
-    subgraph P6 ["Phase 6 — เคลม + เก็บเงิน"]
-        G1to8[G1-G8. รับเคลม + วิเคราะห์ต้นเหตุ<br/>+ แก้และป้องกัน + ปิดเคลม]
-        H1to4[H1-H4. ออกใบกำกับภาษี + วางบิล<br/>+ รับชำระ + ติดตามหนี้ค้าง]
-        H5{{"⚑ H5 · ระงับลูกค้า<br/>ค้างชำระเกิน 60 วัน"}}:::ctrl
+    subgraph P6 ["Phase 6 — เคลม / รับคืน / ซ่อม + การเงิน/วางบิล (G, H)"]
+    G1["G1 · รับแจ้งเคลมจากลูกค้า"]
+    G2["G2 · Triage แยกประเภทเคลม"]
+    G3["G3 · ประเมิน / ตรวจสอบหน้างาน"]
+    G4["G4 · พิจารณารับ / ไม่รับเคลม"]
+    G5["G5 · รับคืนสินค้า (Return)"]
+    G6["G6 · เปิดงานซ่อม / ผลิตทดแทน / ลดหนี้ (Credit Note)"]
+    G7["G7 · Root Cause Analysis (RCA)"]
+    G8["G8 · CAPA + Internal Charge-back"]
+    G9["G9 · ปิดเคลม + รายงาน KPI"]
+    H1["H1 · ออก Invoice / ใบกำกับภาษี (งวดสุดท้าย)"]
+    H2["H2 · วางบิล (Billing Cycle)"]
+    H3["H3 · รับชำระเงิน + ตัด AR"]
+    H4["H4 · AR Aging + Follow-up"]
+    H5{{"⚑ H5 · Overdue → Hold ลูกค้า"}}:::ctrl
     end
-
+    Start --> M1
+    M1 --> M2
+    M2 --> M3
+    M3 --> M4
+    M4 --> M5
+    M5 --> A1
+    A1 --> A2
+    A2 --> A3
+    A3 --> A4
+    A4 --> A5
+    A5 --> A6
+    A6 --> A7
+    A7 --> A8
+    A8 --> A9
+    A9 --> A10
+    A10 --> B1
+    B1 --> B2
+    B2 --> B3
+    B3 --> B4
+    B4 --> B5
+    B5 --> B6
+    B6 --> B7
+    B7 --> B8
+    B8 --> B9
+    B9 --> B10
+    B10 --> B11
+    B11 --> B12
+    B12 --> B13
+    B13 --> B14
+    B14 --> C1
+    C1 --> C2
+    C2 --> C3
+    C3 --> C4
+    C4 --> C5
+    C5 --> C6
+    C6 --> C7
+    C7 --> C8
+    C8 --> C9
+    C9 --> C10
+    C10 --> I1
+    I1 --> I2
+    I2 --> I3
+    I3 --> I4
+    I4 --> D1
+    D1 --> D2
+    D2 --> D3
+    D3 --> D4
+    D4 --> D5
+    D5 --> D6
+    D6 --> D7
+    D7 --> D8
+    D8 --> D9
+    D9 --> D10
+    D10 --> D11
+    D11 --> D12
+    D12 --> D13
+    D13 --> D14
+    D14 --> D15
+    D15 --> D16
+    D16 --> E1
+    E1 --> E2
+    E2 --> E3
+    E3 --> E4
+    E4 --> E5
+    E5 --> F1
+    F1 --> F2
+    F2 --> F3
+    F3 --> F4
+    F4 --> F5
+    F5 --> F6
+    F6 --> F7
+    F7 --> F8
+    F8 --> F9
+    F9 --> F10
+    F10 --> F11
+    F11 --> F12
+    F12 --> G1
+    G1 --> G2
+    G2 --> G3
+    G3 --> G4
+    G4 --> G5
+    G5 --> G6
+    G6 --> G7
+    G7 --> G8
+    G8 --> G9
+    G9 --> H1
+    H1 --> H2
+    H2 --> H3
+    H3 --> H4
+    H4 --> H5
     EndNode("🏁 ปิดงาน + เริ่มนับประกัน"):::startEnd
-
-    Start --> M --> A1 --> A2
-    A2 -- ไม่ครบ --> A1
-    A2 -- ครบ --> A3to6 --> A7 --> A8 --> WonGate
-    WonGate -- ไม่ได้งาน --> Lost("❌ ไม่ได้งาน · บันทึกเหตุผล"):::startEnd
-    WonGate -- ได้งาน --> B1to2 --> B3 --> B4to6 --> B7 --> B8to10 --> B11 --> B12
-    B12 -- ยังไม่เข้า --> Hold1("🛑 พัก SO ไว้"):::startEnd
-    B12 -- เข้าแล้ว --> C1to3 --> C4 --> C5to9 --> C10 --> I1 --> I2
-    I2 -- ไม่ผ่าน --> I4
-    I4 -.-> I1
-    I2 -- ผ่าน --> I3 --> D1to2 --> D3 --> D4to10 --> D11
-    D11 --> D12to14 --> D15 --> E1
-    E1 -- ไม่ผ่าน --> D11
-    E1 -- ผ่าน --> E2to5 --> F1to2 --> F3
-    F3 -- ยังไม่ครบ --> Hold2("🛑 พักการส่งของ"):::startEnd
-    F3 -- ครบแล้ว --> F4to9 --> F10 --> H1to4 --> H5 --> EndNode
-
-    F10 -. มีเคลม .-> G1to8
-    G1to8 -. วงจรปรับปรุง CAPA .-> D11
-
+    H5 --> EndNode
+    G8 -. CAPA Feedback Loop .-> D11
     classDef startEnd fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20
-    classDef phase fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#0D47A1
     classDef ctrl fill:#FFF9C4,stroke:#F57F17,stroke-width:3px,color:#E65100
     classDef gate fill:#FFEBEE,stroke:#C62828,stroke-width:3px,color:#B71C1C
     classDef artifact fill:#E1BEE7,stroke:#6A1B9A,stroke-width:2px,color:#4A148C
