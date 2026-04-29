@@ -1,135 +1,135 @@
 <?xml version='1.0' encoding='utf-8'?>
 <mxfile host="app.diagrams.net">
   <diagram id="wf" name="CHH SOP Workflow">
-    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="5000" math="0" shadow="0">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="5500" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="start" value="🟢 เริ่ม: ลูกค้าสอบถาม" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=2;fontFamily=Sarabun,Tahoma;fontSize=12;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="260" y="40" width="240" height="70" as="geometry" />
+        <mxCell id="start" value="🟢 เริ่ม · ลูกค้าสอบถาม" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=2;fontFamily=Sarabun,Tahoma;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="260" y="40" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="M" value="M. Master Data&#10;เปิดข้อมูลลูกค้า / Supplier / วัสดุ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1976D2;strokeWidth=2;fontFamily=Sarabun,Tahoma;fontSize=12;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="260" y="135" width="240" height="70" as="geometry" />
+        <mxCell id="M" value="M. ข้อมูลตั้งต้น&#10;เปิดข้อมูลลูกค้า / ผู้ขาย / วัสดุ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1976D2;strokeWidth=2;fontFamily=Sarabun,Tahoma;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="260" y="145" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="A1" value="A1. รับ Brief" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="260" y="230" width="240" height="70" as="geometry" />
+        <mxCell id="A1" value="A1. รับเรื่องจากลูกค้า" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="260" y="250" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="A2" value="⚑ A2 · DOR&#10;ข้อมูลครบ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
-          <mxGeometry x="260" y="325" width="240" height="70" as="geometry" />
+        <mxCell id="A2" value="⚑ A2 · ตรวจความครบของข้อมูล&#10;(DOR · ครบหรือยัง?)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
+          <mxGeometry x="260" y="355" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="A3to6" value="A3-A6. Site Survey + Pre-BOM&#10;+ ขอราคาวัสดุ + ทำใบเสนอราคา" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="260" y="420" width="240" height="70" as="geometry" />
+        <mxCell id="A3to6" value="A3-A6. สำรวจหน้างาน + ทำ BOM เบื้องต้น&#10;+ ขอราคาวัสดุ + ทำใบเสนอราคา" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="260" y="460" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="A7" value="⚑ A7 · Margin Review&#10;อนุมัติราคา" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
-          <mxGeometry x="260" y="515" width="240" height="70" as="geometry" />
+        <mxCell id="A7" value="⚑ A7 · ทบทวนกำไร (Margin)&#10;อนุมัติราคา" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
+          <mxGeometry x="260" y="565" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="A8" value="A8. ส่งใบเสนอราคา + ติดตาม" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="260" y="610" width="240" height="70" as="geometry" />
+        <mxCell id="A8" value="A8. ส่งใบเสนอราคา + ติดตามผล" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="260" y="670" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Won" value="ลูกค้าตกลง?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="260" y="705" width="240" height="70" as="geometry" />
+        <mxCell id="Won" value="ลูกค้าตอบรับ?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="260" y="775" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Lost" value="❌ Lost - บันทึก Reason" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=2;fontFamily=Sarabun,Tahoma;fontSize=12;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="560" y="705" width="240" height="70" as="geometry" />
+        <mxCell id="Lost" value="❌ ไม่ได้งาน · บันทึกเหตุผล" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=2;fontFamily=Sarabun,Tahoma;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="580" y="775" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="B1to2" value="B1-B2. รับงาน + เขียน Shop Drawing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="260" y="895" width="240" height="70" as="geometry" />
+        <mxCell id="B1to2" value="B1-B2. รับงาน + เขียนแบบ Shop Drawing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="260" y="985" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="B3" value="⚑ B3 · Internal Review&#10;Constructibility" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
-          <mxGeometry x="260" y="990" width="240" height="70" as="geometry" />
+        <mxCell id="B3" value="⚑ B3 · ทบทวนแบบภายใน&#10;(ทำได้จริงหรือไม่?)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
+          <mxGeometry x="260" y="1090" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="B4to6" value="B4-B6. ส่งลูกค้า + Revision" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="260" y="1085" width="240" height="70" as="geometry" />
+        <mxCell id="B4to6" value="B4-B6. ส่งให้ลูกค้า + แก้แบบ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="260" y="1195" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="B7" value="📋 B7 · AFC Drawing&#10;Approved for Construction" style="shape=document;whiteSpace=wrap;html=1;fillColor=#E1BEE7;strokeColor=#6A1B9A;strokeWidth=2;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#4A148C" vertex="1" parent="1">
-          <mxGeometry x="260" y="1180" width="240" height="70" as="geometry" />
+        <mxCell id="B7" value="📋 B7 · แบบอนุมัติฉบับสุดท้าย&#10;(AFC · Approved for Construction)" style="shape=document;whiteSpace=wrap;html=1;fillColor=#E1BEE7;strokeColor=#6A1B9A;strokeWidth=2;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#4A148C" vertex="1" parent="1">
+          <mxGeometry x="260" y="1300" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="B8to10" value="B8-B10. รับ PO + ตรวจ 3-Way + เปิด SO" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="260" y="1275" width="240" height="70" as="geometry" />
+        <mxCell id="B8to10" value="B8-B10. รับ PO + ตรวจสาม-ทาง + เปิด SO" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="260" y="1405" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="B11" value="B11. ออกใบเรียกมัดจำ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="260" y="1370" width="240" height="70" as="geometry" />
+        <mxCell id="B11" value="B11. ออกใบเรียกเก็บมัดจำ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="260" y="1510" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="B12" value="⛔ B12 · Gate มัดจำเข้า&#10;ก่อน Release Production" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#B71C1C" vertex="1" parent="1">
-          <mxGeometry x="260" y="1465" width="240" height="70" as="geometry" />
+        <mxCell id="B12" value="⛔ B12 · ด่านยืนยันมัดจำเข้า&#10;ก่อนปล่อยเข้าผลิต" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#B71C1C" vertex="1" parent="1">
+          <mxGeometry x="260" y="1615" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Hold1" value="🛑 Hold SO" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=2;fontFamily=Sarabun,Tahoma;fontSize=12;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="560" y="1465" width="240" height="70" as="geometry" />
+        <mxCell id="Hold1" value="🛑 พัก SO ไว้" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=2;fontFamily=Sarabun,Tahoma;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="580" y="1615" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="C1to3" value="C1-C3. รับ SO + BOM + ตรวจสต็อก" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="260" y="1655" width="240" height="70" as="geometry" />
+        <mxCell id="C1to3" value="C1-C3. รับ SO + ทำ BOM + ตรวจสต็อก" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="260" y="1825" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="C4" value="⚑ C4 · Confirm ETA&#10;กับลูกค้า" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
-          <mxGeometry x="260" y="1750" width="240" height="70" as="geometry" />
+        <mxCell id="C4" value="⚑ C4 · ยืนยันวันส่ง&#10;กับลูกค้า" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
+          <mxGeometry x="260" y="1930" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="C5to9" value="C5-C9. MPS + PR/PO + Tracking" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="260" y="1845" width="240" height="70" as="geometry" />
+        <mxCell id="C5to9" value="C5-C9. วางแผนผลิต MPS&#10;+ เปิด PR/PO + ติดตามวัสดุ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="260" y="2035" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="C10" value="⚑ C10 · Issue Production Order&#10;+ Job Pack" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
-          <mxGeometry x="260" y="1940" width="240" height="70" as="geometry" />
+        <mxCell id="C10" value="⚑ C10 · ออกใบสั่งผลิต&#10;+ จัดชุดเอกสารงาน" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
+          <mxGeometry x="260" y="2140" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="I1" value="I1. รับวัสดุจาก Supplier" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="260" y="2035" width="240" height="70" as="geometry" />
+        <mxCell id="I1" value="I1. รับวัสดุจากผู้ขาย" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="260" y="2245" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="I2" value="⚑ I2 · IQC Check&#10;Pass?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
-          <mxGeometry x="260" y="2130" width="240" height="70" as="geometry" />
+        <mxCell id="I2" value="⚑ I2 · ตรวจรับวัสดุ IQC&#10;ผ่านหรือไม่?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
+          <mxGeometry x="260" y="2350" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="I3" value="I3. Put-away เข้าคลัง" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="260" y="2225" width="240" height="70" as="geometry" />
+        <mxCell id="I3" value="I3. จัดเก็บเข้าคลัง" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="260" y="2455" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="I4" value="I4. เคลม Supplier" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="560" y="2130" width="240" height="70" as="geometry" />
+        <mxCell id="I4" value="I4. เคลมผู้ขาย" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="580" y="2350" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="D1to2" value="D1-D2. รับ Job Pack + เบิกวัสดุ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="260" y="2415" width="240" height="70" as="geometry" />
+        <mxCell id="D1to2" value="D1-D2. รับชุดเอกสารงาน + เบิกวัสดุ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="260" y="2665" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="D3" value="⚑ D3 · Setup + First-piece&#10;Check" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
-          <mxGeometry x="260" y="2510" width="240" height="70" as="geometry" />
+        <mxCell id="D3" value="⚑ D3 · ตั้งเครื่อง&#10;+ ตรวจชิ้นแรก" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
+          <mxGeometry x="260" y="2770" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="D4to10" value="D4-D10. ตัด/พับ/เจาะ/เชื่อม&#10;/ขัด/พ่นสี/ประกอบ + In-process QC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="260" y="2605" width="240" height="70" as="geometry" />
+        <mxCell id="D4to10" value="D4-D10. ตัด/พับ/เจาะ/เชื่อม&#10;/ขัด/พ่นสี/ประกอบ&#10;+ ตรวจคุณภาพระหว่างผลิต" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="260" y="2875" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="D11" value="⚑ D11 · NCR&#10;บันทึกของเสีย" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
-          <mxGeometry x="260" y="2700" width="240" height="70" as="geometry" />
+        <mxCell id="D11" value="⚑ D11 · บันทึกของเสีย&#10;(NCR)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
+          <mxGeometry x="260" y="2980" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="D12to14" value="D12-D14. Variance + ECO + Subcon" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="260" y="2795" width="240" height="70" as="geometry" />
+        <mxCell id="D12to14" value="D12-D14. บันทึกผลต่าง + แก้แบบกลางทาง&#10;+ ควบคุมงานจ้างเหมา" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="260" y="3085" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="D15" value="D15. ส่งไป Final QC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="260" y="2890" width="240" height="70" as="geometry" />
+        <mxCell id="D15" value="D15. ส่งงานไปตรวจขั้นสุดท้าย" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="260" y="3190" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="E1" value="⚑ E1 · Final QC 100%&#10;เทียบแบบ AFC" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
-          <mxGeometry x="260" y="2985" width="240" height="70" as="geometry" />
+        <mxCell id="E1" value="⚑ E1 · ตรวจคุณภาพขั้นสุดท้าย 100%&#10;เทียบกับแบบ AFC" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
+          <mxGeometry x="260" y="3295" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="E2to5" value="E2-E5. NCR/CAPA + แพ็ค + ย้าย FG" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="260" y="3080" width="240" height="70" as="geometry" />
+        <mxCell id="E2to5" value="E2-E5. แก้ของเสีย + แพ็ค&#10;+ ย้ายเข้าคลังสินค้าสำเร็จรูป" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="260" y="3400" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="F1to2" value="F1-F2. แจ้งพร้อมส่ง + ออกใบเรียกงวด" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="260" y="3175" width="240" height="70" as="geometry" />
+        <mxCell id="F1to2" value="F1-F2. แจ้งพร้อมส่ง&#10;+ ออกใบเรียกเก็บงวดก่อนส่ง" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="260" y="3505" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="F3" value="⛔ F3 · Gate เงินครบ&#10;ก่อนปล่อยของ" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#B71C1C" vertex="1" parent="1">
-          <mxGeometry x="260" y="3270" width="240" height="70" as="geometry" />
+        <mxCell id="F3" value="⛔ F3 · ด่านยืนยันเงินครบ&#10;ก่อนปล่อยของ" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#B71C1C" vertex="1" parent="1">
+          <mxGeometry x="260" y="3610" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Hold2" value="🛑 Hold ของ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=2;fontFamily=Sarabun,Tahoma;fontSize=12;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="560" y="3270" width="240" height="70" as="geometry" />
+        <mxCell id="Hold2" value="🛑 พักการส่งของ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=2;fontFamily=Sarabun,Tahoma;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="580" y="3610" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="F4to9" value="F4-F9. จัด Route + DO/Invoice&#10;+ ขนส่ง + ลูกค้าเซ็นรับ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="260" y="3460" width="240" height="70" as="geometry" />
+        <mxCell id="F4to9" value="F4-F9. วางเส้นทางขนส่ง&#10;+ ออกใบส่งของและใบกำกับภาษี&#10;+ ส่งสินค้า + ลูกค้าเซ็นรับ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="260" y="3820" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="F10" value="⚑ F10 · Walkthrough + Handover&#10;ลูกค้าเซ็น PAC/FAC" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
-          <mxGeometry x="260" y="3555" width="240" height="70" as="geometry" />
+        <mxCell id="F10" value="⚑ F10 · เดินตรวจหน้างาน + ส่งมอบ&#10;ลูกค้าเซ็น PAC/FAC" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
+          <mxGeometry x="260" y="3925" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="G1to8" value="G1-G8. รับเคลม + RCA + CAPA + ปิด" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="560" y="3555" width="240" height="70" as="geometry" />
+        <mxCell id="G1to8" value="G1-G8. รับเคลม + วิเคราะห์ต้นเหตุ&#10;+ แก้และป้องกัน + ปิดเคลม" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="580" y="3925" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="H1to4" value="H1-H4. ออก Invoice + วางบิล&#10;+ รับชำระ + AR Aging" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="260" y="3745" width="240" height="70" as="geometry" />
+        <mxCell id="H1to4" value="H1-H4. ออกใบกำกับภาษี + วางบิล&#10;+ รับชำระ + ติดตามหนี้ค้าง" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#90A4AE;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="260" y="4135" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="H5" value="⚑ H5 · Hold ลูกค้า&#10;Overdue 60+ วัน" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
-          <mxGeometry x="260" y="3840" width="240" height="70" as="geometry" />
+        <mxCell id="H5" value="⚑ H5 · ระงับลูกค้า&#10;ค้างชำระเกิน 60 วัน" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontFamily=Sarabun,Tahoma;fontSize=11;fontStyle=1;fontColor=#E65100" vertex="1" parent="1">
+          <mxGeometry x="260" y="4240" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="end" value="🏁 ปิดงาน + Warranty" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=2;fontFamily=Sarabun,Tahoma;fontSize=12;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="260" y="3935" width="240" height="70" as="geometry" />
+        <mxCell id="end" value="🏁 ปิดงาน + เริ่มนับประกัน" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=2;fontFamily=Sarabun,Tahoma;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="260" y="4345" width="260" height="80" as="geometry" />
         </mxCell>
         <mxCell id="1000" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="start" target="M" parent="1">
           <mxGeometry relative="1" as="geometry" />
@@ -155,10 +155,10 @@
         <mxCell id="1007" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="A8" target="Won" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="1008" value="Lost" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="Won" target="Lost" parent="1">
+        <mxCell id="1008" value="ไม่ได้งาน" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="Won" target="Lost" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="1009" value="Won" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="Won" target="B1to2" parent="1">
+        <mxCell id="1009" value="ได้งาน" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="Won" target="B1to2" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="1010" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="B1to2" target="B3" parent="1">
@@ -179,7 +179,7 @@
         <mxCell id="1015" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="B11" target="B12" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="1016" value="ไม่เข้า" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="B12" target="Hold1" parent="1">
+        <mxCell id="1016" value="ยังไม่เข้า" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="B12" target="Hold1" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="1017" value="เข้าแล้ว" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="B12" target="C1to3" parent="1">
@@ -200,13 +200,13 @@
         <mxCell id="1022" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="I1" target="I2" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="1023" value="Fail" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="I2" target="I4" parent="1">
+        <mxCell id="1023" value="ไม่ผ่าน" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="I2" target="I4" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="1024" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="I4" target="I1" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="1025" value="Pass" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="I2" target="I3" parent="1">
+        <mxCell id="1025" value="ผ่าน" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="I2" target="I3" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="1026" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="I3" target="D1to2" parent="1">
@@ -230,10 +230,10 @@
         <mxCell id="1032" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="D15" target="E1" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="1033" value="Fail" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="E1" target="D11" parent="1">
+        <mxCell id="1033" value="ไม่ผ่าน" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="E1" target="D11" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="1034" value="Pass" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="E1" target="E2to5" parent="1">
+        <mxCell id="1034" value="ผ่าน" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="E1" target="E2to5" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="1035" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="E2to5" target="F1to2" parent="1">
@@ -242,10 +242,10 @@
         <mxCell id="1036" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="F1to2" target="F3" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="1037" value="ไม่ครบ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="F3" target="Hold2" parent="1">
+        <mxCell id="1037" value="ยังไม่ครบ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="F3" target="Hold2" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="1038" value="ครบ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="F3" target="F4to9" parent="1">
+        <mxCell id="1038" value="ครบแล้ว" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="F3" target="F4to9" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="1039" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="F4to9" target="F10" parent="1">
@@ -260,10 +260,10 @@
         <mxCell id="1042" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10" edge="1" source="H5" target="end" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="1043" value="เคลม" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10;dashed=1;strokeColor=#7c8a9a" edge="1" source="F10" target="G1to8" parent="1">
+        <mxCell id="1043" value="มีเคลม" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10;dashed=1;strokeColor=#7c8a9a" edge="1" source="F10" target="G1to8" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="1044" value="CAPA Loop" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10;dashed=1;strokeColor=#7c8a9a" edge="1" source="G1to8" target="D11" parent="1">
+        <mxCell id="1044" value="วงจรปรับปรุง CAPA" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#37474F;strokeWidth=1.5;fontFamily=Sarabun,Tahoma;fontSize=10;dashed=1;strokeColor=#7c8a9a" edge="1" source="G1to8" target="D11" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
