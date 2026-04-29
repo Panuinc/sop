@@ -1,0 +1,97 @@
+---
+title: CHH SOP Workflow — ภาพรวม 6 Phase
+config:
+  theme: base
+  themeVariables:
+    fontFamily: "Sarabun, Tahoma, sans-serif"
+    primaryColor: "#E3F2FD"
+    primaryTextColor: "#1a2332"
+    primaryBorderColor: "#1976D2"
+    lineColor: "#37474F"
+---
+flowchart TD
+    Start([🟢 เริ่ม: ลูกค้าสอบถาม]):::startEnd
+    M[M. Master Data<br/>เปิดข้อมูลลูกค้า / Supplier / วัสดุ]:::phase
+
+    subgraph P1 ["Phase 1 — รับออเดอร์ + ทำราคา"]
+        A1[A1. รับ Brief]
+        A2{{"⚑ A2 · DOR<br/>ข้อมูลครบ?"}}:::ctrl
+        A3to6[A3-A6. Site Survey + Pre-BOM<br/>+ ขอราคาวัสดุ + ทำใบเสนอราคา]
+        A7{{"⚑ A7 · Margin Review<br/>อนุมัติราคา"}}:::ctrl
+        A8[A8. ส่งใบเสนอราคา + ติดตาม]
+        WonGate{ลูกค้าตกลง?}
+    end
+
+    subgraph P2 ["Phase 2 — เขียนแบบ + รับ SO"]
+        B1to2[B1-B2. รับงาน + เขียน Shop Drawing]
+        B3{{"⚑ B3 · Internal Review<br/>Constructibility"}}:::ctrl
+        B4to6[B4-B6. ส่งลูกค้า + Revision]
+        B7[/"📋 B7 · AFC Drawing<br/>Approved for Construction"/]:::artifact
+        B8to10[B8-B10. รับ PO + ตรวจ 3-Way + เปิด SO]
+        B11[B11. ออกใบเรียกมัดจำ]
+        B12{{"⛔ B12 · Gate มัดจำเข้า<br/>ก่อน Release Production"}}:::gate
+    end
+
+    subgraph P3 ["Phase 3 — วางแผน + จัดซื้อ + IQC"]
+        C1to3[C1-C3. รับ SO + BOM + ตรวจสต็อก]
+        C4{{"⚑ C4 · Confirm ETA<br/>กับลูกค้า"}}:::ctrl
+        C5to9[C5-C9. MPS + PR/PO + Tracking]
+        C10{{"⚑ C10 · Issue Production Order<br/>+ Job Pack"}}:::ctrl
+        I1[I1. รับวัสดุจาก Supplier]
+        I2{{"⚑ I2 · IQC Check<br/>Pass?"}}:::ctrl
+        I3[I3. Put-away เข้าคลัง]
+        I4[I4. เคลม Supplier]
+    end
+
+    subgraph P4 ["Phase 4 — ผลิต"]
+        D1to2[D1-D2. รับ Job Pack + เบิกวัสดุ]
+        D3{{"⚑ D3 · Setup + First-piece<br/>Check"}}:::ctrl
+        D4to10[D4-D10. ตัด/พับ/เจาะ/เชื่อม<br/>/ขัด/พ่นสี/ประกอบ + In-process QC]
+        D11{{"⚑ D11 · NCR<br/>บันทึกของเสีย"}}:::ctrl
+        D12to14[D12-D14. Variance + ECO + Subcon]
+        D15[D15. ส่งไป Final QC]
+    end
+
+    subgraph P5 ["Phase 5 — Final QC + แพ็ค + ส่ง"]
+        E1{{"⚑ E1 · Final QC 100%<br/>เทียบแบบ AFC"}}:::ctrl
+        E2to5[E2-E5. NCR/CAPA + แพ็ค + ย้าย FG]
+        F1to2[F1-F2. แจ้งพร้อมส่ง + ออกใบเรียกงวด]
+        F3{{"⛔ F3 · Gate เงินครบ<br/>ก่อนปล่อยของ"}}:::gate
+        F4to9[F4-F9. จัด Route + DO/Invoice<br/>+ ขนส่ง + ลูกค้าเซ็นรับ]
+        F10{{"⚑ F10 · Walkthrough + Handover<br/>ลูกค้าเซ็น PAC/FAC"}}:::ctrl
+    end
+
+    subgraph P6 ["Phase 6 — เคลม + เก็บเงิน"]
+        G1to8[G1-G8. รับเคลม + RCA + CAPA + ปิด]
+        H1to4[H1-H4. ออก Invoice + วางบิล<br/>+ รับชำระ + AR Aging]
+        H5{{"⚑ H5 · Hold ลูกค้า<br/>Overdue 60+ วัน"}}:::ctrl
+    end
+
+    EndNode([🏁 ปิดงาน + Warranty]):::startEnd
+
+    %% Main flow
+    Start --> M --> A1 --> A2
+    A2 -- ไม่ครบ --> A1
+    A2 -- ครบ --> A3to6 --> A7 --> A8 --> WonGate
+    WonGate -- Lost --> Lost([❌ Lost - บันทึก Reason]):::startEnd
+    WonGate -- Won --> B1to2 --> B3 --> B4to6 --> B7 --> B8to10 --> B11 --> B12
+    B12 -- ไม่เข้า --> Hold1([🛑 Hold SO]):::startEnd
+    B12 -- เข้าแล้ว --> C1to3 --> C4 --> C5to9 --> C10 --> I1 --> I2
+    I2 -- Fail --> I4
+    I4 -.-> I1
+    I2 -- Pass --> I3 --> D1to2 --> D3 --> D4to10 --> D11
+    D11 --> D12to14 --> D15 --> E1
+    E1 -- Fail --> D11
+    E1 -- Pass --> E2to5 --> F1to2 --> F3
+    F3 -- ไม่ครบ --> Hold2([🛑 Hold ของ]):::startEnd
+    F3 -- ครบ --> F4to9 --> F10 --> H1to4 --> H5 --> EndNode
+
+    %% Claim path
+    F10 -.เคลม.-> G1to8
+    G1to8 -. CAPA Feedback Loop .-> D11
+
+    classDef startEnd fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20
+    classDef phase fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#0D47A1
+    classDef ctrl fill:#FFF9C4,stroke:#F57F17,stroke-width:3px,color:#E65100
+    classDef gate fill:#FFEBEE,stroke:#C62828,stroke-width:3px,color:#B71C1C
+    classDef artifact fill:#E1BEE7,stroke:#6A1B9A,stroke-width:2px,color:#4A148C
